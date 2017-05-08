@@ -1,0 +1,27 @@
+app_user_edit:
+    path: /edit/{id}
+    defaults: { _controller: AppBundle:Profile:edit }
+    requirements:
+        id: \d+
+    options:
+        section: utilisateurs_modifier
+        
+app_user_add:
+    path: /add
+    defaults: { _controller: AppBundle:Registration:register }
+    options:
+        section: utilisateurs_ajouter
+        
+app_user_show:
+    path: /show
+    defaults: { _controller: AppBundle:Profile:show }
+    options:
+        section: utilisateurs_voir
+    
+app_user_delete:
+    path: /delete/{id}
+    defaults: { _controller: AppBundle:Profile:delete }
+    requirements:
+        id: \d+
+    options:
+        section: utilisateurs_supprimer

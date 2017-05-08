@@ -1,0 +1,38 @@
+{% trans_default_domain 'AppBundle' %}
+
+
+{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEURS_AJOUTER') %}
+    <p><a href="{{ path('app_user_add') }}" class="btn btn-primary">{{ 'app.boutons.ajout_utilisateur'|trans }}</a></p>
+{% endif %}
+
+<h1 class="page-header">Accueil</h1>
+<table class="table table-condensed table-hover">
+    <tr>
+        <th>{{ 'app.table.th.nom_utilisateur'|trans }}</th>
+        <th>{{ 'app.table.th.prenom'|trans }}</th>
+        <th>{{ 'app.table.th.nom'|trans }}</th>
+        <th>{{ 'app.table.th.mail'|trans }}</th>
+        <th>{{ 'app.table.th.nom_utilisateur'|trans }}</th>
+        <th></th>
+        <th></th>
+    </tr>
+    {% for user in users %}
+        <tr>
+            <td>{{ user.username }}</td>
+            <td>{{ user.prenom }}</td>
+            <td>{{ user.nom }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.lastLogin|date('d/m/Y \\ H:i:m') }}</td>
+            <td>
+                {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEURS_MODIFIER') %}
+                    <a href="{{ path('app_user_edit', {'id': user.id}) }}"><span class="glyphicon glyphicon-edit"></span></a>
+                {% endif %}
+            </td>
+            <td>
+                {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_UTILISATEURS_SUPPRIMER') %}
+                    <a href="{{ path('app_user_delete', {'id': user.id}) }}"><span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span></a>
+                {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+</table>

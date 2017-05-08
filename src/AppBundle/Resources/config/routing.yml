@@ -1,0 +1,15 @@
+app_accueil:
+    path: /
+    defaults: { _controller: AppBundle:Default:index }
+    
+app_utilisateurs:
+    resource: "@AppBundle/Resources/config/routing/utilisateurs.yml"
+    prefix: utilisateurs
+    
+app_file_delete:
+    path: /deleteFile/{id}
+    defaults: { _controller: AppBundle:Default:deleteFile }
+    requirements:
+        id: \d+
+    options:
+        methods: [GET]

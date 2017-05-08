@@ -1,0 +1,29 @@
+app:
+    
+    label:
+        mot_de_passe: Mot de passe
+        mot_depasse_repete: Répétez votre mot de passe
+        activer_compte: Compte activé
+    
+    h3:
+        permission_acces: Permissions d'accès
+        
+    table:
+        th:
+            nom_utilisateur: Nom utilisateur
+            prenom: Prénom
+            nom: Nom
+            mail: Mail
+            
+    boutons:
+        ajout_utilisateur: Ajouter un utilisateur
+        retour: Retour
+        deconnexion: Deconnexion
+        supprimer: supprimer
+        
+    menu:
+        accueil: Accueil
+        utilisateurs: Utilisateurs
+        
+    form:
+        logo: Logo

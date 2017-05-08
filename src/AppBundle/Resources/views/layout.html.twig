@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="ie8 no-')}}"> <![endif]-->
+<!--[if IE 9]> <html class="ie9 no-')}}"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+
+    <!-- BEGIN HEAD -->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Se connecter</title>
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+        <link href="{{asset('vendor/metisMenu/metisMenu.min.css')}}" rel="stylesheet">
+        <link href="{{asset('css/sb-admin-2.css')}}" rel="stylesheet">
+        <link href="{{ asset('vendor/morrisjs/morris.css') }}" rel="stylesheet">
+        <link href="{{ asset('vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.')}}"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        
+
+        <div class="wrapper">
+
+            {% block fos_user_content %}
+               
+            {% endblock %}
+            
+
+        </div>
+
+        <script src="{{asset('vendor/jquery/jquery.min.js')}}" type="text/javascript"></script>
+        <script src="{{asset('vendor/bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
+        <script src="{{asset('vendor/metisMenu/metisMenu.min.js')}}" type="text/javascript"></script>
+        <script src="{{asset('vendor/raphael/raphael.min.js')}}" type="text/javascript"></script>
+        <script src="{{asset('vendor/morrisjs/morris.min.js')}}" type="text/javascript"></script>
+        <script src="{{asset('js/sb-admin-2.js')}}" type="text/javascript"></script>
+
+    </body>
+
+</html>

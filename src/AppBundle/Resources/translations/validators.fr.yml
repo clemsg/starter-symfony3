@@ -1,0 +1,3 @@
+validators:
+    language:
+        mail: Cette adresse Mail existe déjà
